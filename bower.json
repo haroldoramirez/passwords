@@ -1,0 +1,17 @@
+{
+  "name": "passwords",
+  "version": "1.0",
+  "dependencies": {
+    "angular": "1.7.9",
+    "angular-animate": "^1.7.9",
+    "angular-resource": "^1.7.9",
+    "angular-cookies": "^1.7.9",
+    "angular-sanitize": "^1.7.9",
+    "angular-touch": "^1.7.9",
+    "angular-route": "^1.7.9",
+    "angular-ui-router": "^1.0.24",
+    "angular-breadcrumb": "^0.5.0",
+    "bootstrap-switch": "^3.3.4"
+  },
+  "appPath": "app"
+}
