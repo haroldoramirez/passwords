@@ -26,7 +26,7 @@ angular
             .state('passcreate', {
                 url: "/password/new",
                 templateUrl: 'assets/app/views/passwords/create.html',
-                controller: 'password.controller',
+                controller: 'password.create.controller',
                   ncyBreadcrumb: {
                     label: 'Create'
                   },
@@ -36,7 +36,7 @@ angular
             .state('passlist', {
                 url: "/passwords",
                 templateUrl: 'assets/app/views/passwords/list.html',
-                controller: 'password.controller',
+                controller: 'password.list.controller',
                   ncyBreadcrumb: {
                     label: 'List'
                   },
@@ -46,4 +46,9 @@ angular
     //Deixa o link ativado quando estiver em um determinado estado - utilizado no menu gaveta
     }).run(function($rootScope, $state) {
         $rootScope.$state = $state;
-    });
+    //Muda de titulo apos a troca de pagina
+    }).config(function($breadcrumbProvider) {
+        $breadcrumbProvider.setOptions({
+            template: '<a class="navbar-brand" ng-repeat="step in steps">{{step.ncyBreadcrumbLabel}}</a>'
+        });
+    })

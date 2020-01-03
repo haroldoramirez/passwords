@@ -1,5 +1,9 @@
 angular.module('password')
-  .controller('password.controller', function ($scope) {
+    .controller('password.list.controller', function ($scope) {
 
-    console.log('passwordcontroller');
-});
+        console.log('passwordlistcontroller');
+
+    })  .controller('password.create.controller', function ($scope) {
+
+        console.log('passwordcreatecontroller');
+    });

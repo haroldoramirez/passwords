@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>LIST</title>
-</head>
-<body>
-<p>PASSLIST</p>
-</body>
-</html>
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <div class="pull-right search">
+                <form>
+                    <div class="input-group">
+                        <input class="form-control" type="search" id="searchbox" name="f" placeholder="Filter by name">
+                        <span class="input-group-btn">
+                            <input type="submit" id="searchsubmit" value="Filter" class="btn btn-wd btn-info btn-fill btn-magnify">
+                            <a type="button" href="@routes.ArtigoController.telaLista()" class="btn btn-default">Clear</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card-content table-responsive table-full-width">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Password</th>
+                    <th class="text-right">Date</th>
+                    <th class="text-right">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Google</td>
+                    <td>*******</td>
+                    <td class="text-right">12/12/2019</td>
+                    <td class="td-actions text-right">
+                        <a href="#" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
+                            <i class="ti-pencil-alt"></i>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
