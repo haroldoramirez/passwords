@@ -4,11 +4,11 @@
         Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
     -->
     <div class="logo">
-        <a href="@routes.HomeController.index" class="simple-text logo-mini">
+        <a ui-sref="home" class="simple-text logo-mini">
             PW
         </a>
 
-        <a href="@routes.HomeController.index" class="simple-text logo-normal">
+        <a ui-sref="home" class="simple-text logo-normal">
             PassW
         </a>
     </div>
@@ -51,13 +51,13 @@
             </div>
         </div>
         <ul class="nav">
-            <li class="active">
-                <a href="">
+            <li ng-class="{active:$state.current.activetab == 'home'}">
+                <a ui-sref="home">
                     <i class="ti-home"></i>
                     <p>Home</p>
                 </a>
             </li>
-            <li>
+            <li ng-class="{active:$state.current.collapsedtab == 'password'}">
                 <a data-toggle="collapse" href="#dashboardOverview">
                     <i class="ti-wallet"></i>
                     <p>Passwords
@@ -66,14 +66,14 @@
                 </a>
                 <div class="collapse" id="dashboardOverview">
                     <ul class="nav">
-                        <li>
-                            <a href="">
+                        <li ng-class="{active:$state.current.activetab == 'password-create'}">
+                            <a ui-sref="passcreate">
                                 <span class="sidebar-mini">C</span>
                                 <span class="sidebar-normal">Create</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="">
+                        <li ng-class="{active:$state.current.activetab == 'password-list'}">
+                            <a ui-sref="passlist">
                                 <span class="sidebar-mini">L</span>
                                 <span class="sidebar-normal">List</span>
                             </a>
