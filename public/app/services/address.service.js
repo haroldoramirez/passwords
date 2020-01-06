@@ -9,4 +9,12 @@ angular.module('password')
             getFiltroUsuarios: {method: 'GET', url: 'usuarios/filtro/:filtro', isArray: true},
             getAutenticado: {method: 'GET', url: 'current', isArray: false}
         });
+    }])
+    .service('Conta',['$resource',
+      function($resource){
+        return $resource('conta/:id', {}, {
+            cadastrar: {method: 'POST', url: 'conta/cadastrar', isArray: false},
+            update: {method: 'PUT', url: 'conta/:id', isArray: false},
+            getAll: {method: 'GET', url: 'contas', isArray: true},
+        });
     }]);

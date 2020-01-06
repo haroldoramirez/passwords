@@ -23,25 +23,25 @@ angular
                   },
                 activetab: 'home'
             })
-            .state('passcreate', {
-                url: "/password/new",
-                templateUrl: 'assets/app/views/passwords/create.html',
-                controller: 'password.create.controller',
+            .state('criarconta', {
+                url: "/conta/novo",
+                templateUrl: 'assets/app/views/contas/criar.html',
+                controller: 'conta.criar.controller',
                   ncyBreadcrumb: {
                     label: 'Create'
                   },
-                activetab: 'password-create',
-                collapsedtab: 'password'
+                activetab: 'conta-criar',
+                collapsedtab: 'conta'
             })
-            .state('passlist', {
-                url: "/passwords",
-                templateUrl: 'assets/app/views/passwords/list.html',
-                controller: 'password.list.controller',
+            .state('listarconta', {
+                url: "/contas",
+                templateUrl: 'assets/app/views/contas/listar.html',
+                controller: 'conta.listar.controller',
                   ncyBreadcrumb: {
                     label: 'List'
                   },
-                activetab: 'password-list',
-                collapsedtab: 'password'
+                activetab: 'conta-listar',
+                collapsedtab: 'conta'
             })
     //Deixa o link ativado quando estiver em um determinado estado - utilizado no menu gaveta
     }).run(function($rootScope, $state) {

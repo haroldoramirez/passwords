@@ -20,7 +20,7 @@
                     <p>Home</p>
                 </a>
             </li>
-            <li ng-class="{active:$state.current.collapsedtab == 'password'}">
+            <li ng-class="{active:$state.current.collapsedtab == 'conta'}">
                 <a data-toggle="collapse" href="#dashboardOverview">
                     <i class="ti-wallet"></i>
                     <p>Passwords
@@ -29,14 +29,14 @@
                 </a>
                 <div class="collapse" id="dashboardOverview">
                     <ul class="nav">
-                        <li ng-class="{active:$state.current.activetab == 'password-create'}">
-                            <a ui-sref="passcreate">
+                        <li ng-class="{active:$state.current.activetab == 'conta-criar'}">
+                            <a ui-sref="criarconta">
                                 <span class="sidebar-mini">C</span>
                                 <span class="sidebar-normal">Create</span>
                             </a>
                         </li>
-                        <li ng-class="{active:$state.current.activetab == 'password-list'}">
-                            <a ui-sref="passlist">
+                        <li ng-class="{active:$state.current.activetab == 'conta-listar'}">
+                            <a ui-sref="listarconta">
                                 <span class="sidebar-mini">L</span>
                                 <span class="sidebar-normal">List</span>
                             </a>
