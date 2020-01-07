@@ -9,7 +9,7 @@ angular.module('password')
 
         $scope.save = function(){
             console.log($scope.categoria);
-            Conta.save($scope.conta, function(data) {
+            Conta.cadastrar($scope.conta, function(data) {
                 console.log('Conta salva com sucesso');
                 //$state.go($state.listarconta, {}, {reload: false});
             }, function(data){
